@@ -7,8 +7,8 @@ while True:
 	hHThuong_ear = speech_recognition.Recognizer()
 	with speech_recognition.Microphone() as mic:
 		print("Thuong : i'm Listening")
+		print("...")
 		audio = hHThuong_ear.listen(mic)
-	print("...")
 	try:
 		your_command = hHThuong_ear.recognize_google(audio)
 	except:
@@ -16,7 +16,7 @@ while True:
 	print("you: "+your_command)
 	
 	#
-	if "bye" in your_command:
+	if "turn off" in your_command:
 		break
 	#understand
 	if "today" in your_command:
